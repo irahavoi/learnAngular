@@ -3,7 +3,10 @@
  */
 var myAppModule = angular.module('myApp', []);
 myAppModule.controller('HelloWorldController', function($scope){
-    var messages = {};
-    messages.hello = 'Hello, Angular!';
-    $scope.messages = messages;
+    $scope.result = 'Hello, Angular!';
+
+    $scope.changesCount = 0;
+    $scope.updateChangeCounter = function(){
+        $scope.changesCount++;
+    }
 });
