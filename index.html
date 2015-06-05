@@ -1,15 +1,18 @@
 <!doctype html>
-<html ng-app>
+<html ng-app="myApp"> <!-- Defining the module name -->
 <head>
     <title>My Angular App</title>
 </head>
-<body ng-controller="HelloWorldController">
-    <p>{{helloWorld}}</p>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+<body ng-controller="HelloWorldController"> <!-- Defining the contoller -->
+    <p>{{messages.hello}}</p>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 <script>
-    function HelloWorldController($scope){
-        $scope.helloWorld = "Hello Angular World!"
-    }
+    var myAppModule = angular.module('myApp', []);
+    myAppModule.controller('HelloWorldController', function($scope){
+        var messages = {};
+        messages.hello = 'Hello, Angular!';
+        $scope.messages = messages;
+    });
 </script>
 </body>
 </html>
