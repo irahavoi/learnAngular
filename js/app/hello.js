@@ -9,4 +9,6 @@ myAppModule.controller('HelloWorldController', function($scope){
     $scope.updateChangeCounter = function(){
         $scope.changesCount++;
     }
+
+    $scope.$watch('result', $scope.updateChangeCounter);
 });
