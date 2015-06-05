@@ -282,3 +282,30 @@ textarea {
         page-break-after: avoid;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.canvas{
+    position: relative;
+}
+
+.changesMadeInfo{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
