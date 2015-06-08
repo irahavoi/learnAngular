@@ -10,6 +10,4 @@ myAppModule.controller('AddUserController', function($scope){
         console.log('User ' + user.firstName + ' has been added!');
     }
 
-});/**
- * Created by irahavoi on 6/8/2015.
- */
+});
