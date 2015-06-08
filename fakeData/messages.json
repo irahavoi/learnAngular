@@ -1,0 +1,23 @@
+[
+    {
+        "id": 0,
+        "sender": "test0@company.io",
+        "subject": "Spam 0",
+        "message": "Sorry for spamming you :)",
+        "recipients": ["test10@mycompany.com", "test11@mycompany.com"]
+    },
+    {
+        "id": 1,
+        "sender": "test1@company.io",
+        "subject": "Spam 1",
+        "message": "Sorry for spamming you :)",
+        "recipients": ["test10@mycompany.com", "test11@mycompany.com"]
+    },
+    {
+        "id": 2,
+        "sender": "test2@company.io",
+        "subject": "Spam 2",
+        "message": "Sorry for spamming you :)",
+        "recipients": ["test10@mycompany.com", "test11@mycompany.com"]
+    }
+]
