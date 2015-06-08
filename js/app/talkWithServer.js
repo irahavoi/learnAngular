@@ -14,6 +14,8 @@ myAppModule.controller('ServerTalkController', function($scope, $http){
                 $scope.responseData = data;
                 $scope.invalidUrl = false;
 
+                console.log(data);
+
             }).error(function(data, status, headers, config){
                 $scope.invalidUrl = true;
                 $scope.responseData = null;
@@ -21,7 +23,7 @@ myAppModule.controller('ServerTalkController', function($scope, $http){
                 $scope.serverResponse =
                     'Error occurred when trying to send a request for the url "' +
                         $scope.url +
-                    "! Error status: " +
+                    "! Response status: " +
                         status;
             });
     }
