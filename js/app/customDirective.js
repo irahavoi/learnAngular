@@ -43,8 +43,38 @@ myModule.directive('cachedHello', function(){
 });
 
 myModule.directive('helloTransclude', function(){
-    return{
+    return {
         template : '<div>Hi <strong ng-transclude></strong>. I use transclusion.</div>',
         transclude : true
     }
+});
+
+myModule.directive('expander', function(){
+   return {
+       restrict: 'EA',
+       replace: true,
+       transclude: true,
+       scope: {title : '=expanderTitle'},
+       template: '<div>' +
+           '<div class="title" ng-click="toggle()">{{title}}</div>' +
+           '<div class="body" ng-show="showMe" ng-transclude=""></div>' +
+           '</div>',
+       link : function(scope, element, attrs){
+           scope.showMe = false;
+           scope.toggle = function toggle(){
+               scope.showMe = !scope.showMe;
+
+               if(scope.showMe){
+                   scope.title = 'Now Click me to Collapse!';
+               } else{
+                   scope.title = 'Click me to Expand!';
+               }
+           }
+       }
+   }
+});
+
+myModule.controller('MyController', function($scope){
+   $scope.title = 'Click me to expand!';
+   $scope.text = 'Awesome awesomeness, yay! See my source code for an example of directive compiling and linking!'
 });

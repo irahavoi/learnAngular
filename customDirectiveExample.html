@@ -3,11 +3,12 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Custom Directives Example</title>
+    <link rel="stylesheet" type="text/css" href="css/main/customDirectiveExample.css">
     <link rel="stylesheet" type="text/css" href="css/main/main.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
 </head>
-<body>
+<body ng-controller="MyController">
    <h3>Different types of template loading:</h3>
    <hello></hello>
    <bye></bye>
@@ -16,6 +17,10 @@
    <div class="alert alert-success" hello-transclude="">Username</div>
 
    <h3>Compile and Link Functions:</h3>
+   <h5>Initialization Process: Script loads > Compile phase (executed only once) > Link phase (creates listeners on the DOM or model to keep them in sync. Executed many times, once for each instance of the directive)</h5>
+   <expander class="expander" expander-title="title">
+       {{text}}
+   </expander>
 
 <!-- Inline template example -->
 <script type="text/ng-template" id="seeYouTemplateInline.html">

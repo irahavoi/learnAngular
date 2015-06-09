@@ -1,0 +1,15 @@
+div.expander{
+    border: 1px solid black;
+    width: 250px;
+    border-radius: 3px;
+}
+div.expander > .title{
+    background-color: black;
+    color: white;
+    padding: .1em .3em;
+    cursor: pointer;
+}
+
+div.expander > .body{
+    padding: .1em .3em;
+}
